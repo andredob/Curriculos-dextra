@@ -1,0 +1,25 @@
+<ion-header>
+    <img width="100" height="71" src="https://dextra.com.br/wp-content/uploads/2018/12/cropped-dextra-logo-min-1.png" class="custom-logo" alt="Desenvolvimento de software sob medida" style="max-width: none;">
+</ion-header>
+
+<ion-content>
+
+  <div style="text-align: center; padding-top: 10px;"> Olha só Ju! achei 30 ótimos candidatos para a vaga de Java </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let profile of dataJson" size="4">
+        <ion-card  href="https://app.kenoby.com/#/candidatos/{{profile.id}}"> 
+            <ion-card-header>
+              <img src="{{profile.photo}}" style="height: 300px;">
+              <p>{{profile.name}}</p>
+              
+            </ion-card-header>
+            <ion-card-content>
+              {{profile.experience}}
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+ 
+</ion-content>
